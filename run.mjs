@@ -50,7 +50,7 @@ async function api(path) {
       headers: {
         'Authorization': `Bearer ${creds.accessToken}`,
       },
-      signal: AbortSignal.timeout(30_000),
+      signal: AbortSignal.timeout(30_0000),
     })).json();
   } finally {
     unlock();
