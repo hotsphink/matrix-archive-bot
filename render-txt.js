@@ -6,7 +6,7 @@ let path = require('path');
 let { root, historicalRoot, rooms, sanitizeRoomName } = require('./utils.js');
 
 for (let { room, historical } of rooms) {
-  let roomDir = path.join('logs', 'docs', sanitizeRoomName(room), 'plaintext');
+  let roomDir = path.join('docs', sanitizeRoomName(room), 'plaintext');
   fs.mkdirSync(roomDir, { recursive: true });
   let roomJsonDir = path.join(historical ? historicalRoot : root, room);
   let days = fs

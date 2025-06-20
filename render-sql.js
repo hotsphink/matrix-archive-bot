@@ -30,7 +30,7 @@ let { makeDb } = require('./scripts/make-dbs.js');
       throw new Error(`expected to find ${lastAddedFile}`);
     }
 
-    let indexDir = path.join(__dirname, 'logs', 'docs', '_indexes', sanitized);
+    let indexDir = path.join(__dirname, 'docs', '_indexes', sanitized);
 
     // add everything more recent than the last-added item
     let last = JSON.parse(fs.readFileSync(lastAddedFile, 'utf8'));
